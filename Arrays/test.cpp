@@ -16,7 +16,7 @@ int main(){
     //cout<<"The elements of the array are " ; 
 
     for(int i = 0 ; i < 5 ; i++){
-        cout<<3 * arr[i]<<" " ;
+        cout<<4 * arr[i]<<" " ;
     }
     cout<<endl ; 
     return 0 ; 
