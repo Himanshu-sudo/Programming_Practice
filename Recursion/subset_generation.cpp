@@ -6,10 +6,12 @@ void subsets(vector<int>& nums , vector<int>& partial , vector<vector<int>>& res
         result.push_back(partial) ; 
         return ; 
     }
-    subsets(nums , partial , result , n - 1) ; 
+
     partial.push_back(nums[n - 1]) ; 
     subsets(nums , partial , result , n - 1) ; 
     partial.pop_back() ; 
+    subsets(nums , partial , result , n - 1) ; 
+   
 }
 
 int main()
@@ -37,5 +39,8 @@ int main()
         }
         cout << endl ; 
     }
+
+
+    cout << "The size of the result is " << result.size() << endl ; 
     return 0;
 }
