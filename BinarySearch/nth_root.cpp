@@ -19,7 +19,7 @@ double nth_root(int n , int p){
         double mid = (double)(low + (double)((high - low) / 2)) ; 
         // cout << mid << endl ; 
         if(multiply(mid , p) < n){
-            low = mid ; 
+            low = mid ; // take it upto mid, because the value is double and adding 1 is wrong 
         }
         else{
             high = mid ; 
