@@ -3,3 +3,4 @@ output.txt
 *.exe
 /.vscode
 /.vscode/settings.json
+/.cph
