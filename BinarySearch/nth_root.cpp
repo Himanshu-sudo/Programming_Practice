@@ -31,10 +31,10 @@ double nth_root(int n , int p){
 
 int main()
 {
-    #ifndef ONLINE_JUDGE
-        freopen("C:\\Users\\Himanshu\\Desktop\\Programming_Practice\\input.txt", "r", stdin);
-        freopen("C:\\Users\\Himanshu\\Desktop\\Programming_Practice\\output.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    //     freopen("C:\\Users\\Himanshu\\Desktop\\Programming_Practice\\input.txt", "r", stdin);
+    //     freopen("C:\\Users\\Himanshu\\Desktop\\Programming_Practice\\output.txt", "w", stdout);
+    // #endif
 
     int n , p ;
     cin >> n >> p ; 
