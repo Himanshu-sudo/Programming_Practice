@@ -46,10 +46,10 @@ void mergesort(int arr[], int left, int right){
 
 int main()
 {
-    #ifndef ONLINE_JUDGE
-        freopen("/home/himanshu/Programming/input.txt", "r", stdin);
-        freopen("/home/himanshu/Programming/output.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    //     freopen("/home/himanshu/Programming/input.txt", "r", stdin);
+    //     freopen("/home/himanshu/Programming/output.txt", "w", stdout);
+    // #endif
 
     int n ; 
     cin>>n ;
