@@ -6,11 +6,6 @@ int year_century(int year){
 }
 int main()
 {
-    #ifndef ONLINE_JUDGE
-        freopen("C:\\Users\\Himanshu\\Desktop\\Programming_Practice\\input.txt", "r", stdin);
-        freopen("C:\\Users\\Himanshu\\Desktop\\Programming_Practice\\output.txt", "w", stdout);
-    #endif
-
     int year ; 
 
     cin >> year ; 
