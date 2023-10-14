@@ -5,3 +5,4 @@ output.txt
 /.vscode/settings.json
 /.cph
 *.prob
+*.class
