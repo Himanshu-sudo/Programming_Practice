@@ -13,11 +13,17 @@ void print_binary(int num){
     cout << "\n";
 }
 
+void print_binary_easy(int num){
+    for(int i = 31; i >= 0; i--){
+       cout << ((num >> i) & 1);
+    }
+}
+
 int main() {
     // printing binary representation of a number.
     int n;
     cout << "Enter a number you wish to find binary representation of \n";
     cin >> n;
-    print_binary(n);
+    print_binary_easy(n);
     return 0;
 }
