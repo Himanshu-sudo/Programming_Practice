@@ -1,3 +1,4 @@
+// The implementation of binary search algorithm. 
 #include<bits/stdc++.h>
 using namespace std;
 
