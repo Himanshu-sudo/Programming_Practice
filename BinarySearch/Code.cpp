@@ -7,7 +7,7 @@ int binary_search(vector<int>& nums , int element){
     int high = nums.size() - 1 ; 
 
     while(low < high){
-        int mid = low + (high - low) / 2 ; 
+        int mid = low + (high - low) / 2 ;  // instead of this you can also do (high + low) >> 1 to get the middle element index.
         if(nums[mid] == element){
             return mid ; 
         }
