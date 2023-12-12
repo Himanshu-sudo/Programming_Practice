@@ -5,16 +5,17 @@ long long M = 1e18 + 7;
     here we will see if the value of a and M to be very large and in ETF we will see if b is too large.
     
 */
+int binary_multiplication(int, int);
 
 int large_exponentiation(int a, int b) {
     // a = a % M we can do this if the value of a is very large. but if M is very large then even if a is 10 ^ 9 it can grow large.
     int ans = 1;
     while (b != 0) {
         if ((b & 1) != 0) {
-            ans *= a; // a will only be multiplied to answer if the bit is set there.
+            ans = binary_multiplication(ans, a); // a will only be multiplied to answer if the bit is set there.
         }
         b >>= 1;
-        a *= a; // The power of 3 is going to double with each iteration as 1 2 4 8 16 This is the binary value for each bit.
+        a = binary_multiplication(a, a); // The power of 3 is going to double with each iteration as 1 2 4 8 16 This is the binary value for each bit.
         // here if a = 1e9 then it becomes 1e18 in the next iteration and after that it becomes 1e36 which cannot be stored.
         // so for that we use binary multiplication.
     }
@@ -42,6 +43,7 @@ int binary_multiplication(int a, int b) {
 }
 
 int main() {
-    cout << binary_multiplication(3, 13);
+    cout << binary_multiplication(13, 3) << "\n";
+    cout << large_exponentiation(2, 10) << "\n";
     return 0;
 }
