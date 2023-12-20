@@ -11,6 +11,7 @@ bool isVowel(char v) {
     return (v == 'a') || (v == 'e') || (v == 'i') || (v == 'o') || (v == 'u');
 }
 
+// generating all the subsets for each and every vowel in the name.
 vector<string> subset_generation(string str) {
     vector<string> ans;
     int size = (1 << str.size());
@@ -42,6 +43,8 @@ int main() {
         
         unordered_map<string, int> hash;
         
+        // The approach is to generate all the possible subsets for multiple vowels in the name and
+        // check how many times that subset occurs in the other names.
         for (int i = 0; i < n; i++) {
             set<char> distinct_vowels;
 
@@ -56,12 +59,15 @@ int main() {
                 vowelstr.push_back(c);
             }
 
+            // we will increment the value of the hash for each and every subset
             vector<string> all_possible_subsets = subset_generation(vowelstr);
             for (string vowel_subsets : all_possible_subsets) {
                 hash[vowel_subsets]++;
             }
         }
         
+        // Let's take an example, if the count if ae is 2 and count of a and e is 3 then there is the case that some
+        // other word is selected by vowel e which is the new possibility, so you don't have to substract that. 
         long long ans = 0;
         for (auto pr : hash) {
             if (pr.second < 3) continue;
